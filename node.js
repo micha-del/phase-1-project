@@ -1,10 +1,12 @@
-const mykey = 'c737eadcc1f96817b0fda252b6010c02'
+fetch('./db.json')
+  .then((response) => response.json())
+  .then((json) => console.log(json))
 let weather = {
   fetchWeather: function(city) {
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" 
     + city
     + "&units=imperial&appid="
-    + mykey
+    + API_Key
     )
     .then((response) => response.json())
     .then((data) => this.displayWeather(data))
@@ -24,12 +26,7 @@ let weather = {
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%"
     document.querySelector(".wind").innerText = "Wind speed: " + speed + " mp/h "
     document.body.style.backgroundImage = "url('https://source.unsplash.com/1980x1080/?"+ name + "')"
-  },
-  search: function (){
-    this.fetchWeather(document.querySelector(".search-bar").value)
-  }
-}
-document.querySelector(".search button")
+    document.querySelector(".search button")
 .addEventListener("click", function () {
   weather.search();
 })
@@ -38,3 +35,8 @@ if (event.key == "Enter") {
   weather.search()
 }
 })
+  },
+  search: function (){
+    this.fetchWeather(document.querySelector(".search-bar").value)
+  }
+}
