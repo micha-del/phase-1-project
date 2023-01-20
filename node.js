@@ -1,4 +1,4 @@
-const mykey = config.MY_KEY
+const mykey = 'c737eadcc1f96817b0fda252b6010c02'
 let weather = {
   fetchWeather: function(city) {
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" 
