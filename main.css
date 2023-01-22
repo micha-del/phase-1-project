@@ -57,3 +57,10 @@ button:hover {
 h1.temp {
   margin: 0%
 }
+#comment-box, #post {
+  border: none;
+  border-radius: 5px;
+}
+#post:hover{
+  background-color: deeppink;
+}
