@@ -1,1 +1,2 @@
 # phase-1-project
+I created a weather checking application that allowed you to look up any city in the world and it would return with information about the weather in that city for the day. The app will show you the temperature, humidity, wind speed, and current forecast. It'll also show you in the background, a picture from the city that you enter into the search bar. Try to enter something like Paris, or Tokyo and see what pictures you get from the query!
